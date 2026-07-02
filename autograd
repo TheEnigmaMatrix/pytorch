@@ -1,0 +1,32 @@
+source code
+https://colab.research.google.com/drive/1022HrY0cW-DNMj3vG2n6-OjmRXtE8lh2?usp=sharing
+
+initally in the code we say i gets difficult to find te derivative of the function with incresaing comlpexity
+
+>>so first what is the blueprint for creating a deeplearning neural path
+   - forwaard pass - input is sent ahead and prediction is made bsed on a certain algo
+   - output got is y' an doriginal output is y so now we calculate loss via a algo
+   - backward pass in this we calculate gradient of loss with respect to input parameters
+   - on the basis of this we adjust the parameters algos etc using several techniques
+
+   hence neural netwrok is like a nested function
+   now it is possible as algo becomes complicated calculating grdient becomes a tedious task so here comes autograd
+
+>>AUTOGRAD provide automatical gradient calculation for tensors
+
+>> if you want gradient of a tensor afterwords then while creaing it do requires_grad = yes as by default it is set to no 
+   and later use backward function and grad function to find the gradient
+
+>> we cant calculate gradient about intermediate nodes
+
+
+>> if we call backward then many gradient start to accumulate which is not so good
+    eg ig grad is 4 next ime instead of 4 we will get 8
+    hence after each time calculating the grad we do grad.zero to make the grad = zero to avoid accumulation 
+
+>> how to disable gradient tracking
+    once neural network is completely trained we dont need to calculate gradient anymore so we need only forward pass 
+    can be done via 
+       - x.requires_grad(false)
+       - make a diff tensor via detach and now z wont have gradient tracking but still x will have i
+       - call no_grad function
