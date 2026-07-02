@@ -1,3 +1,91 @@
 >> tensor is multidimensional array
     0D - Scalar 
     1D - Vector , Array
+    2D - Grey scaled Image
+    3D - RGB Image
+    4D - Batch of several RGB images
+    5D - RGB Video
+
+>> on google collab pytorch is already installed so you can use that to write code
+
+
+(if you want to use gpu change runtime device to gpu default we get tesla t4)
+
+SOURCE CODE 
+https://colab.research.google.com/drive/1LgMnRIHSE9NjI2G1YRGSa8wIQqfSf8W8?usp=sharing#scrollTo=W8o-1cUl4M2x
+
+
+CREATING A TENSOR 
+
+   - empty allocates memory of desired size and dont assign any value
+   - zeroes assign value zero 
+   - ones assign value 1
+   - rand assign random value from 0-1
+   - manual_seed( a no is assigned to this seed here eg 100) permanently assigns the random value that .rand creates afterwards
+   - tensor to manually give
+   - arange(int :start , int :end , int :jump)
+   - linspace(int :start , int :end , int :linear spacing)
+   - eye(n) to create a identity matrix of n*n
+   - full((size) , all no are equal to)
+
+TENSOR SHAPE (assume x is the tensor already defined)
+
+   - x.shape tells the shape
+   - torch.empty_like(x) creates a random tensor of size x
+   - zeroes_like
+   - ones_like
+   - rand_like - this will NOT work as sometimes the values of x can be all integer but rand gives float 
+
+
+TENSOR DATATYPE
+
+   -x.dtype tell the datatype 
+   -we can specify our own datatype to each tensor
+   -x.to to change the datatype of an existing tensor
+   -check pytorch supported datatypes online
+
+
+MATHEMATICAL FUNCTIONS
+
+   -not writing the basic ones like +
+   -torch.abs(x) to make values absolute
+   -round to round off
+   -ceil to go upper limit like 2.2 becomes 3
+   -floor is oppo of ceil
+   -clamp is used to bring all no in a range
+   -a lot of in the source code atatched
+
+
+INPLACE OPERATIONS
+
+   -when we do a+b then its values are saved in a diff tensor tacking up a lot of space
+   -we have inplave operations for this like.add_ .relu_
+   - _ reprent we are using inplace operations
+
+
+COYING TENSOR
+
+   -if i do a  b=a  then change something in a then automatically the b changes as well as b is not a tensor just a reference to a called basic 
+   -use clone function for this
+
+
+USING GPU
+
+   -device = torch.device('cuda')  the device saves the gpu device
+   -to create a tensor on gpu define device whilw creating the tensor
+   -to move existig tensor to gpu a.to(device) now all the operations we do will happen on gpu
+
+
+RESHAPING TENSORS
+
+   -in reshape total elements should be same as before
+   -permute can change the order of dimensions
+   -unsqueeze(n) create a new dimwnsion at nth position
+   -squeeze(n) to remove a dimension from nth position
+
+>> we can change pytorch tensor to numpy array to use sklearn features
+
+
+
+
+   
