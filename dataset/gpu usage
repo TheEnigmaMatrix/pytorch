@@ -1,0 +1,11 @@
+source code
+https://colab.research.google.com/drive/17hjS23CgFqIZjuB2XKt2u7pVu1MpD2Qr?usp=sharing
+
+>> first check availability of gpu and save it as device
+>> move the model to gpu by model.to(device)
+>> move data to gpu (batch features and labels .to(device)) and then reassign them to same variable name
+>> do the same thing in the evaluation and you are good to go
+
+>> recommendation while amijng the loader make pin memory as on and also consider relatively bug bach size upto 128
+
+>> thats it for now
