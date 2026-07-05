@@ -1,0 +1,11 @@
+source code 
+https://colab.research.google.com/drive/1REudoW3X8RNA53vf8j_pir540JyzB7uR?usp=sharing
+
+>> ANN == arttificial neural network
+>> in this we will be building a comlpete ann 
+>> as till now we havent learnt how to work on gpu so we will limit the no of data we use from the dataset we got from kaggle
+    and next time we will learn how to use gpu and then will work on the cmoplete dataset|
+
+>> its recommended that while training a neural network we keep the values between 0-1 so we divided by 255 so kinda we did manual scaling
+
+>> we can read this source code revising evrything we have done till now
