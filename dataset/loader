@@ -1,0 +1,26 @@
+source code
+https://colab.research.google.com/drive/1P7Nn_nZ2wVKERZxcf4V0JeTD8_BIPC6G?usp=sharing
+
+>> earlier the code we did has a major flow, we used batch gradient descent , means we are using our complete data for calculation of parameters hence very space insufficient
+>> so rather then using the entire data we should use data in small batches and this is called miny batch descent
+
+>> we have written the manual code for this but its not efficient 
+>> so we use dataset and data loader classes given by the pytorch
+
+>> dataset class loads the data and data loader make the batches of the loaded data 
+
+>> inside the dataclass 
+    inside __init__ we define how the data should be loaded from the memory
+    __len__ tell the total no of rows and hence tells us what no of batches would be formed 
+    __getitem__ returns the data at the given index
+
+>> dataloader 
+    first shuffles the indices and then make the batches of size decided earlier
+    then we send this to our custom dataset class to the __getitem__ 
+    in the end batch is returned to the main training loop 
+
+>> till now all this work is sequential so we use workers feature for parralelly doing things
+>> dataloadercontaines a feature called sampler which helps in randomizing the indices
+>> now also we can make our custom sampler obviously Sequentialsamlpler and customsampler 
+>> collate funstion specifies how to combine a list of indices to make a batch tensor   
+ 
