@@ -1,2 +1,36 @@
 source code 
 https://colab.research.google.com/drive/1j9JVaahEDkzwmR0GR3OE7-khODnUgPeL?usp=sharing
+
+>> we will try to imoprove the accuracy of the model keeping the pipeline
+>> writing the complete model is hectic especially when neural network is very big thus we will use nn module for this
+>> also in nn module we will get ready made loss function
+>> also use several others already made components
+
+>> we will also learn optim
+
+>> we will first make a neural netwrok via torch.nn module
+
+>> make the module inherit nn.module class
+>> linear is a feature of nn module in this you just have to tell the no of input and no of output
+>> then we make the sigmoid function
+>> then create the forward pass
+
+(linear the step where we used weights and bias and sigmoid is the future pridiction algo)
+
+>> via trochinfo summary we can get the summary of the model
+
+>> now we try to make a better model with hidden layers for that we will use relu 
+>> it get input equal to number of features and lets say is giving 3 weights as output for the linear1
+>> then we will use relu
+>> then make linear two getting 3 input and giving 1 output
+>> use sigmoid 
+
+>> so now we make the relevant features in forward
+
+>> well defining everything in forward is hectic so we use sequential containers
+>> made relevant changes in backward and all
+
+>> torchoptim give optimization techniques and its efficiently handles change in parameter
+>> in the source code we used SGD method
+>> model.parameters is a iterator that can automatically iterate them
+>> opti izer.step autom automatically changes the parameters
