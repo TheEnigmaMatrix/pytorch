@@ -1,0 +1,26 @@
+source code
+https://colab.research.google.com/drive/1YDVmsVD8zkdDh5lqumA_HtIh_WqH10FC?usp=sharing
+
+>> there was a big issue with the code before - Overfit so we need to optimize to reduce Overfit
+>> possible solutions ;-
+    >adding more data
+    >reduce nn complexity
+    >regularisation     (add penalty)
+    >dropout
+    >data augmentation
+    >batch normalization
+    >early stopping
+
+
+>>DROPOUT 
+        > turn off random neurons 
+        > we use them after activation(relu) and give a p value(the percent of neurons to turn off)
+
+>> BATCH NORMALIZATION 
+        > done before activation 
+        > normalize the hidden layer activations
+
+>>L2 REGULARISATION 
+        > we add a penalty term in loss and now we have to reduce it to we put penalty term to weights and not bias 
+        > in l2 its the summation of weights squared
+        > penalize large weights and distribute it to other weights to reduce dependency from one particular weights
