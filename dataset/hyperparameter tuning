@@ -1,0 +1,25 @@
+source code
+https://colab.research.google.com/drive/1DvwpHIQhpBxX1g1YLm4gdaJHiDw5OVbK?usp=sharing
+
+>> how to know the architecture like no of hidden layers n of neurons epoch value batch size learning rate dropout rate
+>> till now we decided by intuition so now how to do it?? experimentation
+
+>> today we will use baysean search from a library optuna
+>> for this we should know optuna but obviously i will not learn it first lol
+
+>> first we make a objecive function
+      > we give it a trial object 
+      > we define search space in which we define min and max no of hidden layer neurons etc 
+      > we initialise model here 
+      > also initialate other parameters 
+      > training and evaluation loop will also happen in this 
+      > from this entre function we return accuracy 
+
+      > we make a study object 
+      > in thius we define the no of trials we will do in objective function 
+
+>> first we did hyperloop for neurons and hidden layers only 
+>> then we made myNN module class
+
+
+
